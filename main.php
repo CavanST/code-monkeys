@@ -1,8 +1,22 @@
 #!/usr/bin/php
 <?php
 
-$arr = json_decode($argv[1], true);
-print_r($arr);
+require_once "Journey.php";
+
+unset($argv[0]);
+
+// allows for ordering multiple journeys
+$journeys = [];
+foreach ($argv as $arg) {
+    $steps = json_decode($argv[1], true);
+    $journeys[] = new Journey($steps);
+}
+
+// print all ordered journeys
+foreach ($journeys as $j) {
+    echo "\n";
+    print_r($j->getItinerary());
+}
 
 die();
 
