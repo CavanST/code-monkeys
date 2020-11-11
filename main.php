@@ -2,15 +2,12 @@
 <?php
 
 require_once "Journey.php";
+require_once "InputHandler.php";
 
 unset($argv[0]);
 
-// allows for ordering multiple journeys
-$journeys = [];
-foreach ($argv as $arg) {
-    $steps = json_decode($argv[1], true);
-    $journeys[] = new Journey($steps);
-}
+// orders multiple journeys
+$journeys = InputHandler::jsonToArray($argv);
 
 // print all ordered journeys
 foreach ($journeys as $j) {
