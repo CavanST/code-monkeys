@@ -10,12 +10,10 @@ unset($argv[0]);
 $journeys = InputHandler::jsonToArray($argv);
 
 // print all ordered journeys
-foreach ($journeys as $j) {
-    echo "\n";
+foreach ($journeys as $i => $j) {
+    $journeyNum = $i + 1;
+    echo "\n****** Journey {$journeyNum} ******\n";
     print_r($j->getItinerary());
 }
 
 die();
-
-// example input
-// "[{\"from\": \"Adolfo Suárez Madrid–Barajas Airport, Spain\",\"to\": \"London Heathrow, UK\"},{\"from\": \"Fazenda São Francisco Citros, Brazil\",\"to\": \"São Paulo–Guarulhos International Airport, Brazil\"},{\"from\": \"London Heathrow, UK\",\"to\": \"Loft Digital, London, UK\"},{\"from\": \"Porto International Airport, Portugal\",\"to\": \"Adolfo Suárez Madrid–Barajas Airport, Spain\"},{\"from\": \"São Paulo–Guarulhos International Airport, Brazil\",\"to\": \"Porto International Airport, Portugal\"}]"

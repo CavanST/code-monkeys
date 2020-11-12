@@ -31,18 +31,21 @@ class Journey
             }
         }
 
+        // add start point to the ordered journey
         $this->orderedJourney[] = $this->startPoint;
 
-        // remove start and end steps
+        // remove start point
         if (($key = array_search($this->startPoint, $steps)) !== false) {
             unset($steps[$key]);
         }
+        // remove end point
         if (($key = array_search($this->endPoint, $steps)) !== false) {
             unset($steps[$key]);
         }
 
         $this->middleSteps = $steps;
 
+        // order middle steps
         $prevTo = $this->startPoint['to'];
         $count = count($this->middleSteps);
         for ($i = $count; $i > 0; $i--) {
@@ -55,6 +58,7 @@ class Journey
             }
         }
 
+        // complete ordered journey by adding end point
         $this->orderedJourney[] = $this->endPoint;
     }
 
