@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-require_once "Journey.php";
+require_once "classes/Journey.php";
 
 class JourneyTest extends TestCase
 {

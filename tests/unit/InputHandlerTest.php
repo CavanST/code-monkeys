@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-require_once "InputHandler.php";
+require_once "classes/InputHandler.php";
 
 class InputHandlerTest extends TestCase
 {

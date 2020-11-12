@@ -1,8 +1,8 @@
 #!/usr/bin/php
 <?php
 
-require_once "Journey.php";
-require_once "InputHandler.php";
+require_once "classes/Journey.php";
+require_once "classes/InputHandler.php";
 
 unset($argv[0]);
 
