@@ -14,3 +14,18 @@
 
 <h3>How to run tests</h3>
 <span>.\vendor\bin\phpunit</span>
+
+<h2>Development Process<h2>
+<ol>
+<li>Create project and enable CLI execution</li>
+<li>Accept JSON string input</li>
+<li>Convert JSON string to array</li>
+<li>Create a list of possible start and end points</li>
+<li>Find the real start and end points</li>
+<li>Remove start and end points from the array of journey steps</li>
+<li>Loop through journey steps to find the step where the "from" value equals the "to" value from the previous step</li>
+<li>Moved journey logic to its own class</li>
+<li>Move JSON to array functionality to its own class</li>
+<li>Write unit tests</li>
+<li>General cleanup</li>
+</ol>
